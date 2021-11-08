@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item
+            android:id="@+id/nav_Table"
+            android:icon="@drawable/frequency"
+            android:title="Table" />
+        <item
+            android:id="@+id/nav_food"
+            android:icon="@drawable/fastfood"
+            android:title="Food" />
+        <item
+            android:id="@+id/nav_option"
+            android:icon="@drawable/settings"
+            android:title="Option" />
+
+
+</menu>
+
+
