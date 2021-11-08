@@ -2,6 +2,10 @@ package com.example.duan1_nhom3.Fragment;
 
 import android.app.Dialog;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,37 +14,52 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.duan1_nhom3.R;
 
-public class fragment_table extends Fragment {
+
+public class fragment_tablee extends Fragment {
     ImageButton imageButton;
     RecyclerView recy_table;
-    TextView textView,textView2;
+    TextView textView, textView2;
     ImageView imageView2;
 
-    public fragment_table() {
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+
+    private String mParam1;
+    private String mParam2;
+
+    public fragment_tablee() {
+        // Required empty public constructor
     }
 
-    public static fragment_table newInstance(String param1, String param2) {
-        fragment_table fragment = new fragment_table();
-
+    public static fragment_tablee newInstance(String param1, String param2) {
+        fragment_tablee fragment = new fragment_tablee();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
         return fragment;
     }
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_table, container, false);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_tablee, container, false);
         recy_table = view.findViewById(R.id.recy_table);
         imageButton = view.findViewById(R.id.imageButton);
-        textView= view.findViewById(R.id.textView);
-        imageView2= view.findViewById(R.id.imageView2);
+        textView = view.findViewById(R.id.textView);
+        imageView2 = view.findViewById(R.id.imageView2);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

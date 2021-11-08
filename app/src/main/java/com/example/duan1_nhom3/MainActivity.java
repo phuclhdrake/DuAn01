@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.example.duan1_nhom3.ViewPage.Viewpageadapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import com.example.duan1_nhom3.Fragment.fragment_table;
+import com.example.duan1_nhom3.Fragment.fragment_tablee;
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
         init();
 
         // Đổ fragment_table vào viewpager
-        fragmentManager.beginTransaction().replace(R.id.fragmnet_context, fragment_table.newInstance(null,null)).commit();
+
+        fragmentManager.beginTransaction().replace(R.id.fragmnet_context, fragment_tablee.newInstance(null,null)).commit();
 
         // Hàm bắt sự kiện bottomNavigation
         bottomNavigationOnclick();
@@ -41,10 +42,13 @@ public class MainActivity extends AppCompatActivity {
 
     // Bắt sự kiện bottomNavigation
     private void bottomNavigationOnclick() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
         bottomNavigationView.setOnNavigationItemSelectedListener((item) ->{
             switch (item.getItemId()){
                 case R.id.nav_Table:
-                    fragmentManager.beginTransaction().replace(R.id.fragmnet_context, fragment_table.newInstance(null,null)).commit();
+                    fragmentManager.beginTransaction().replace(R.id.fragmnet_context,fragment_tablee.newInstance(null,null)).commit();
+
                     break;
                 case R.id.nav_food:
                     Toast.makeText(MainActivity.this, "food", Toast.LENGTH_SHORT).show();
