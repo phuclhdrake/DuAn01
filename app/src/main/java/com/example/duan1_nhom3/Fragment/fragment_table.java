@@ -47,18 +47,11 @@ public class fragment_table extends Fragment {
                 Dialog dialog = new Dialog(getContext());
                 dialog.setContentView(R.layout.dialog_themtable);
 
-
-
                 Button button_luu = dialog.findViewById(R.id.button_dialogThemtable_luu);
                 button_luu.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
-
                         dialog.dismiss();
-
-
-
                     }
                 });
 
