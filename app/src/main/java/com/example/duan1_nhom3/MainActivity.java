@@ -43,12 +43,10 @@ public class MainActivity extends AppCompatActivity {
     // Bắt sự kiện bottomNavigation
     private void bottomNavigationOnclick() {
         FragmentManager fragmentManager = getSupportFragmentManager();
-
         bottomNavigationView.setOnNavigationItemSelectedListener((item) ->{
             switch (item.getItemId()){
                 case R.id.nav_Table:
                     fragmentManager.beginTransaction().replace(R.id.fragmnet_context,fragment_tablee.newInstance(null,null)).commit();
-
                     break;
                 case R.id.nav_food:
                     Toast.makeText(MainActivity.this, "food", Toast.LENGTH_SHORT).show();
