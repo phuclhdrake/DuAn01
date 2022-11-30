@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".activity.MainActivity">
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmnet_context"
         android:layout_width="0dp"
@@ -17,10 +16,11 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navi"
-        android:layout_width="409dp"
-        android:layout_height="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
         android:layout_alignParentBottom="true"
-        app:itemBackground="@color/white"
+        android:background="@color/white"
+        app:itemTextColor="@color/color_bottom_click"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

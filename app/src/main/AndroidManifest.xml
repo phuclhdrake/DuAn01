@@ -1,22 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.duan1_nhom3">
+    package="com.example.duan1">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DuAn1_Nhom3">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name="com.example.duan1.activity.SplashScreenActitity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.duan1.activity.AddStaffActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.duan1.activity.InfoHoaDon"
+            android:exported="false" />
+        <activity
+            android:name="com.example.duan1.activity.HoadonActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.duan1.activity.FoodBoardActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.duan1.activity.DoanhThuActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.duan1.activity.StaffActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.duan1.activity.MainActivity"
+            android:exported="true">
+
         </activity>
     </application>
 
